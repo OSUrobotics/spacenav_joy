@@ -1,0 +1,14 @@
+<launch>
+
+ <!-- spacenav node -->
+  <node respawn="true" pkg="spacenav_node"
+        type="spacenav_node" name="spacenav_node" >
+  </node>
+
+ <!-- teleop -->
+  <node pkg="spacenav_joy" type="turtle_teleop_joy.py" name="spacenav_joy"/>
+
+	<!-- turtlebot stage -->
+  <include file="$(find turtlebot_stage)/launch/turtlebot_in_stage.launch"/>
+
+</launch>
